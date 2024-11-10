@@ -158,8 +158,8 @@ DELETE /api/books/{id}: Delete a book by ID.
 Path Param: id (integer)
 Response: Success message.
 
-POST /api/books/{id}/summary: Generate a summary for a book by ID.
-Path Param: id (integer)
+POST /summaries/generate-summary: Generate a summary for a book by ID.
+Request Body: {"content": "content of book to be summarized"}
 Response: Generated summary for the book.
 
 8.2 Review Management Endpoints
