@@ -162,7 +162,7 @@ POST /api/books/{id}/summary: Generate a summary for a book by ID.
 Path Param: id (integer)
 Response: Generated summary for the book.
 
-4.2 Review Management Endpoints
+8.2 Review Management Endpoints
 
 POST /reviews/{id}: Add a review for a book.
 Path Param: id (integer)
@@ -173,7 +173,7 @@ GET /reviews/{id}: Retrieve all reviews for a book.
 Path Param: id (integer)
 Response: List of reviews for the book.
 
-4.3 User Authentication Endpoints
+8.3 User Authentication Endpoints
 
 POST /auth/sign-up: Register a new user.
 Request Body: { "username": "user1", "email":"email", "password": "password" }
@@ -183,7 +183,7 @@ POST /auth/login: Login and receive a JWT token.
 Request Body: { "username": "user1", "password": "password" }
 Response: { "access_token": "jwt_token", "token_type": "bearer" }
 
-4.4 Book Recommendations Endpoint
+8.4 Book Recommendations Endpoint
 
 GET /api/recommendations: Get book recommendations based on user preferences (future feature).
 Request Body: { "content":"user query" }
