@@ -136,6 +136,59 @@ Use this JWT token for authorization on protected endpoints by adding it to the 
 Authorization: Bearer <jwt_token>
 ```
 
+## 8. Application Endpoints
+8.1 Book Management Endpoints
+POST /api/books: Add a new book.
+Request Body: { "title": "Book Title", "author": "Author Name", "genre": "Fiction", "year_published": 2021 }
+Response: The created book object.
+
+GET /api/books: Retrieve all books.
+Response: List of all books.
+
+GET /api/books/{id}: Retrieve a book by ID.
+Path Param: id (integer)
+Response: Book object.
+
+PUT /api/books/{id}: Update a book's information by ID.
+Path Param: id (integer)
+Request Body: { "title": "New Title", "author": "New Author", "genre": "New Genre", "year_published": 2022 }
+Response: Updated book object.
+
+DELETE /api/books/{id}: Delete a book by ID.
+Path Param: id (integer)
+Response: Success message.
+
+POST /api/books/{id}/summary: Generate a summary for a book by ID.
+Path Param: id (integer)
+Response: Generated summary for the book.
+
+4.2 Review Management Endpoints
+
+POST /reviews/{id}: Add a review for a book.
+Path Param: id (integer)
+Request Body: { "user_id": 1, "review_text": "Great book!", "rating": 5 }
+Response: Created review object.
+
+GET /reviews/{id}: Retrieve all reviews for a book.
+Path Param: id (integer)
+Response: List of reviews for the book.
+
+4.3 User Authentication Endpoints
+
+POST /auth/sign-up: Register a new user.
+Request Body: { "username": "user1", "email":"email", "password": "password" }
+Response: Created user object.
+
+POST /auth/login: Login and receive a JWT token.
+Request Body: { "username": "user1", "password": "password" }
+Response: { "access_token": "jwt_token", "token_type": "bearer" }
+
+4.4 Book Recommendations Endpoint
+
+GET /api/recommendations: Get book recommendations based on user preferences (future feature).
+Request Body: { "content":"user query" }
+Response: list of matching titles of books
+
 ## Key Features Implemented
 
 * Modular approach to all the routes making the code easy to maintain.
