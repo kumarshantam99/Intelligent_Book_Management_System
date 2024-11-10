@@ -32,10 +32,8 @@ This project implements an intelligent book management system that integrates wi
 
 1. Clone the repository
 
-<pre> ```bash git clone <repository_url> ``` </pre>
+```bash git clone <repository_url> ``` 
 
 2. Create and activate a Python virtual environment:
 
-<pre> ```bash python3 -m venv venv
-  source venv/bin/activate  # On Windows, use venv\Scripts\activate
-  ``` </pre>
+```bash python3 -m venv venv source venv/bin/activate  # On Windows, use venv\Scripts\activate ```
